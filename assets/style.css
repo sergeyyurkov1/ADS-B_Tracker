@@ -1,0 +1,123 @@
+#info_button {
+  cursor: help !important;
+
+  background-image: url("1.png");
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  border: none;
+  overflow: hidden;
+  outline: none;
+  width: 52px !important;
+  height: 52px !important;
+}
+
+.btn:focus,
+.btn:active,
+.btn-close:focus,
+.btn-close:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+html,
+body {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  max-width: 100% !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.leaflet-control-attribution > a:nth-child(1),
+.leaflet-control-attribution > span:nth-child(2) {
+  display: none;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+#ddm {
+  position: absolute;
+  top: calc(var(--nav-height) + 10px + 64px);
+  left: calc(100vw - 12px);
+  transform: translate(-100%, -100%);
+  z-index: 900;
+  background-color: rgba(33, 37, 41, 0.9);
+  padding: 6px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+._dash-loading {
+  margin: auto;
+  color: transparent;
+  width: 0;
+  height: 0;
+  text-align: center;
+}
+._dash-loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 8px solid #f8f9fa;
+  border-top: 8px solid #0d6efd;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dash-spinner * {
+  display: none !important;
+}
+.dash-spinner {
+  background-image: url("1.gif");
+  background-size: contain;
+  width: 100px !important;
+  height: 100px !important;
+  background-repeat: no-repeat;
+}
+
+:root {
+  --app-height: 100%;
+  --nav-height: 53px;
+}
+
+@media only screen and (max-width: 338px) {
+  #ddm-button,
+  #aircraft-image {
+    display: none;
+  }
+}
+@media only screen and (max-width: 300px) {
+  #ddm {
+    display: none;
+  }
+}
+@media only screen and (max-width: 208px) {
+  #nvb,
+  .leaflet-right {
+    display: none;
+  }
+}
+
+#content {
+  height: calc(var(--app-height) - var(--nav-height));
+}

@@ -1,0 +1,10 @@
+gunicorn
+pandas
+dash-leaflet==0.1.28
+plotly
+dash
+dash-extensions
+dash-bootstrap-components
+requests
+protobuf<=3.20.0
+python-dotenv
